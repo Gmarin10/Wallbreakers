@@ -1,8 +1,8 @@
 class Solution:
     def transpose(self, A: List[List[int]]) -> List[List[int]]:
-        B = []
+        B = A[:][:]
         #B is the matrix that will hold the transpose of A
-        for x in A:
-            for y in A[0]:
-                B[x][y] = A[y][x] #should write to new matrix in B, returns error
+        for x in range(len(A)):
+            for y in range(len(A[0])):
+                B[x][y] = A[y][x]       # not proper solution
         return (B)
